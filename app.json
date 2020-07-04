@@ -1,0 +1,11 @@
+{
+  "name": "book-gallery",
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
