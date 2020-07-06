@@ -1,5 +1,5 @@
 # book-gallery-api
-A simple authentication API for the books gallery app
+A simple authentication API for the [books gallery app](https://github.com/she-code-africa/WOSCA-book-gallery)
 
 ## Core Technologies
 1. NodeJS/Express
@@ -43,3 +43,6 @@ A simple authentication API for the books gallery app
     ```
       npm run start:dev
     ```
+
+### Contributing
+Refer to the contribution guidelines for this project [here](CONTRIBUTION.md)
