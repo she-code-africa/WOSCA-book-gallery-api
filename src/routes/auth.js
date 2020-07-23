@@ -4,6 +4,6 @@ import { signupValidator } from '../validator/index';
 const router = express.Router();
 const { signup } = require('../controllers/auth');
 
-router.post('/user', signupValidator, signup);
+router.post('/auth/signup', signupValidator, signup);
 
 export default router;
