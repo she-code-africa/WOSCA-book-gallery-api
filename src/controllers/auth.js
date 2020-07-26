@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const model = require('../models/index');
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import model from '../models/index';
 
 exports.signup = async (req, res) => {
   const {
@@ -11,7 +11,7 @@ exports.signup = async (req, res) => {
   let { password } = req.body;
 
   if (password !== confirmPassword) {
-    return res.json({ message: "passwords don't match" });
+    return res.status(401).json({ message: "passwords don't match" });
   }
 
   await model.User.findOne({
@@ -41,7 +41,6 @@ exports.signup = async (req, res) => {
       const token = jwt.sign({ id }, process.env.secret);
       return res.json({
         token,
-        user: username,
       });
     })
 

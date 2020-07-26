@@ -1,9 +1,8 @@
 import express from 'express';
 import morgan from 'morgan';
+import expressValidator from 'express-validator';
 import indexRouter from './routes/index';
 import authRouter from './routes/auth';
-
-const expressValidator = require('express-validator');
 
 require('dotenv').config();
 
