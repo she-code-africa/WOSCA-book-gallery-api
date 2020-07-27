@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import model from '../models/index';
 
-exports.signup = async (req, res) => {
+exports.signup = async (req, res, next) => {
   const {
     username, email, confirmPassword,
   } = req.body;
@@ -45,6 +45,6 @@ exports.signup = async (req, res) => {
       });
     })
 
-      .catch((error) => res.status(504).json(error));
+      .catch((error) => next(error));
   });
 };
