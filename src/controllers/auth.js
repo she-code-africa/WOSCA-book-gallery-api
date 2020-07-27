@@ -41,6 +41,7 @@ exports.signup = async (req, res) => {
       const token = jwt.sign({ id }, process.env.secret);
       return res.status(200).json({
         token,
+        user: username,
       });
     })
 

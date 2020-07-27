@@ -24,6 +24,21 @@ A simple authentication API for the [books gallery app](https://github.com/she-c
 
 2. Create a `.env` file in the root directory using the sample `.env.sample` file and update the database URL with your connection credentials
 
+Example
+```
+user=user
+password=****
+database=database
+host=127.0.0.1
+dbport=5432
+
+
+
+```
+Also Jwt secret
+```
+secret=yoursecret
+```
 2. Globally install sequelize cli
     ```
       npm install -g sequelize-cli
