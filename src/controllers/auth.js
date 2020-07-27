@@ -23,7 +23,7 @@ exports.signup = async (req, res) => {
   }).then((user) => {
     if (user) {
       return res.status(403).json({
-        error: 'email is already taken Login!',
+        error: 'email is already taken!',
       });
     }
   });
@@ -39,11 +39,11 @@ exports.signup = async (req, res) => {
     }).then((user) => {
       const { id } = user;
       const token = jwt.sign({ id }, process.env.secret);
-      return res.json({
+      return res.status(200).json({
         token,
       });
     })
 
-      .catch((error) => error);
+      .catch((error) => res.status(504).json(error));
   });
 };
