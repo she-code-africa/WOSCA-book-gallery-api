@@ -38,10 +38,10 @@ exports.signup = async (req, res, next) => {
 
     }).then((user) => {
       const { id } = user;
-      const token = jwt.sign({ id }, process.env.secret);
+      const token = jwt.sign({ id, username }, process.env.secret);
       return res.status(201).json({
         token,
-        user: username,
+
       });
     })
 
