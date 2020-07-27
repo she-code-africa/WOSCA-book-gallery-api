@@ -22,23 +22,8 @@ A simple authentication API for the [books gallery app](https://github.com/she-c
 ### Database Setup
 1. Create a Postgres database for your local development with any name of your choice.
 
-2. Create a `.env` file in the root directory using the sample `.env.sample` file and update the database URL with your connection credentials
+2. Create a `.env` file in the root directory by copying the [sample file](.env.sample) and updating the database variables with your connection credentials, as well as the JWT signing secret.
 
-Example
-```
-user=user
-password=****
-database=database
-host=127.0.0.1
-dbport=5432
-
-
-
-```
-Also Jwt secret
-```
-secret=yoursecret
-```
 2. Globally install sequelize cli
     ```
       npm install -g sequelize-cli
