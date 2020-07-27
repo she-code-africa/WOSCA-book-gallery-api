@@ -39,7 +39,7 @@ exports.signup = async (req, res, next) => {
     }).then((user) => {
       const { id } = user;
       const token = jwt.sign({ id }, process.env.secret);
-      return res.status(200).json({
+      return res.status(201).json({
         token,
         user: username,
       });
